@@ -221,7 +221,8 @@
             <div class="u-columns col2-set" id="customer_login">
                 <div class="row justify-content-center">
                 <div class="u-column1 col-lg-6">
-                    <form method="post" class="woocommerce-form woocommerce-form-register register">
+                    <form method="post" class="woocommerce-form woocommerce-form-register register" action="{% url 'register' %}">
+                        {% csrf_token %}
 
                         <h5 class="mt-0 mb-3 h5-styled">Sign Up</h5>
             
@@ -239,53 +240,53 @@
             
                         
                         
-            <div class="show_if_seller" style="display:none">
-            
-                <div class="split-row form-row-wide">
-                    <p class="form-row form-group">
-                        <label for="first-name">First Name <span class="required">*</span></label>
-                        <input type="text" class="input-text form-control" name="fname" id="first-name" value="" required="required" disabled="">
-                    </p>
-            
-                    <p class="form-row form-group">
-                        <label for="last-name">Last Name <span class="required">*</span></label>
-                        <input type="text" class="input-text form-control" name="lname" id="last-name" value="" required="required" disabled="">
-                    </p>
-                </div>
-            
-                <p class="form-row form-group form-row-wide">
-                    <label for="company-name">Shop Name <span class="required">*</span></label>
-                    <input type="text" class="input-text form-control" name="shopname" id="company-name" value="" required="required" disabled="">
-                </p>
-            
-                <p class="form-row form-group form-row-wide">
-                    <label for="seller-url" class="pull-left">Shop URL <span class="required">*</span></label>
-                    <strong id="url-alart-mgs" class="pull-right"></strong>
-                    <input type="text" class="input-text form-control" name="shopurl" id="seller-url" value="" required="required" disabled="">
-                    <small>https://www.zpwash.com/ZIPWASHER/<strong id="url-alart"></strong></small>
-                </p>
-            
+                <div class="show_if_seller" style="display:none">
                 
-                <p class="form-row form-group form-row-wide">
-                    <label for="shop-phone">Phone Number<span class="required">*</span></label>
-                    <input type="text" class="input-text form-control" name="phone" id="shop-phone" value="" required="required" disabled="">
-                </p>
-            
+                    <div class="split-row form-row-wide">
+                        <p class="form-row form-group">
+                            <label for="first-name">First Name <span class="required">*</span></label>
+                            <input type="text" class="input-text form-control" name="fname" id="first-name" value="" required="required" disabled="">
+                        </p>
+                
+                        <p class="form-row form-group">
+                            <label for="last-name">Last Name <span class="required">*</span></label>
+                            <input type="text" class="input-text form-control" name="lname" id="last-name" value="" required="required" disabled="">
+                        </p>
+                    </div>
+                
+                    <p class="form-row form-group form-row-wide">
+                        <label for="company-name">Shop Name <span class="required">*</span></label>
+                        <input type="text" class="input-text form-control" name="shopname" id="company-name" value="" required="required" disabled="">
+                    </p>
+                
+                    <p class="form-row form-group form-row-wide">
+                        <label for="seller-url" class="pull-left">Shop URL <span class="required">*</span></label>
+                        <strong id="url-alart-mgs" class="pull-right"></strong>
+                        <input type="text" class="input-text form-control" name="shopurl" id="seller-url" value="" required="required" disabled="">
+                        <small>https://www.zpwash.com/ZIPWASHER/<strong id="url-alart"></strong></small>
+                    </p>
+                
+                    
+                    <p class="form-row form-group form-row-wide">
+                        <label for="shop-phone">Phone Number<span class="required">*</span></label>
+                        <input type="text" class="input-text form-control" name="phone" id="shop-phone" value="" required="required" disabled="">
+                    </p>
+                
+                    </div>
+                
+                
+                    <p class="form-row form-group user-role vendor-customer-registration">
+                        <label class="radio">
+                            <input type="radio" name="role" value="customer" checked="checked" class="dokan-role-customer">I am a customer    
+                        </label>
+                        <br>
+                        <label class="radio">
+                            <input type="radio" name="role" value="seller" class="dokan-role-seller">
+                            I am a vendor    
+                        </label>
+                    </p>
+                    <wc-order-attribution-inputs><input type="hidden" name="wc_order_attribution_source_type" value="typein"><input type="hidden" name="wc_order_attribution_referrer" value="(none)"><input type="hidden" name="wc_order_attribution_utm_campaign" value="(none)"><input type="hidden" name="wc_order_attribution_utm_source" value="(direct)"><input type="hidden" name="wc_order_attribution_utm_medium" value="(none)"><input type="hidden" name="wc_order_attribution_utm_content" value="(none)"><input type="hidden" name="wc_order_attribution_utm_id" value="(none)"><input type="hidden" name="wc_order_attribution_utm_term" value="(none)"><input type="hidden" name="wc_order_attribution_utm_source_platform" value="(none)"><input type="hidden" name="wc_order_attribution_utm_creative_format" value="(none)"><input type="hidden" name="wc_order_attribution_utm_marketing_tactic" value="(none)"><input type="hidden" name="wc_order_attribution_session_entry" value="https://www.zpwash.com/"><input type="hidden" name="wc_order_attribution_session_start_time" value="2025-03-09 00:35:18"><input type="hidden" name="wc_order_attribution_session_pages" value="3"><input type="hidden" name="wc_order_attribution_session_count" value="5"><input type="hidden" name="wc_order_attribution_user_agent" value="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0"></wc-order-attribution-inputs><div class="woocommerce-privacy-policy-text"><p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="" class="woocommerce-privacy-policy-link" target="_blank">Privacy policy</a>.</p>
                 </div>
-            
-            
-                <p class="form-row form-group user-role vendor-customer-registration">
-                    <label class="radio">
-                        <input type="radio" name="role" value="customer" checked="checked" class="dokan-role-customer">I am a customer    
-                    </label>
-                    <br>
-                    <label class="radio">
-                        <input type="radio" name="role" value="seller" class="dokan-role-seller">
-                        I am a vendor    
-                    </label>
-                </p>
-                <wc-order-attribution-inputs><input type="hidden" name="wc_order_attribution_source_type" value="typein"><input type="hidden" name="wc_order_attribution_referrer" value="(none)"><input type="hidden" name="wc_order_attribution_utm_campaign" value="(none)"><input type="hidden" name="wc_order_attribution_utm_source" value="(direct)"><input type="hidden" name="wc_order_attribution_utm_medium" value="(none)"><input type="hidden" name="wc_order_attribution_utm_content" value="(none)"><input type="hidden" name="wc_order_attribution_utm_id" value="(none)"><input type="hidden" name="wc_order_attribution_utm_term" value="(none)"><input type="hidden" name="wc_order_attribution_utm_source_platform" value="(none)"><input type="hidden" name="wc_order_attribution_utm_creative_format" value="(none)"><input type="hidden" name="wc_order_attribution_utm_marketing_tactic" value="(none)"><input type="hidden" name="wc_order_attribution_session_entry" value="https://www.zpwash.com/"><input type="hidden" name="wc_order_attribution_session_start_time" value="2025-03-09 00:35:18"><input type="hidden" name="wc_order_attribution_session_pages" value="3"><input type="hidden" name="wc_order_attribution_session_count" value="5"><input type="hidden" name="wc_order_attribution_user_agent" value="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0"></wc-order-attribution-inputs><div class="woocommerce-privacy-policy-text"><p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="" class="woocommerce-privacy-policy-link" target="_blank">Privacy policy</a>.</p>
-            </div>
                         <div class="woocommerce-form-row form-row">
                             <input type="hidden" id="woocommerce-register-nonce" name="woocommerce-register-nonce" value="39626b6be8"><input type="hidden" name="_wp_http_referer" value="/my-account-3/">                <div class="btn-right"><button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="Register">Register</button></div>
                         </div>
@@ -391,13 +392,13 @@
             </g>
         </svg>
             <div class="footer-bg">
-        
+
                 <div class="footer-inner container-xl pt-xl-3 pb-2 pt-5 px-5">
-        
+
                     
             <div class="footer-top">
                 <div class="row">
-        
+
                     <div class="col-sm-6 col-lg-4 pb-3">
                                             <div class="widget widget_text"><div class="widget-content">			<div class="textwidget"><h4>Vosha</h4>
         <p>Reinventing the way of creating websites, we aim to create&nbsp;the most master-peaced WordPress theme available on the market.</p>
@@ -405,49 +406,49 @@
                 </div></div>                                                    <nav aria-label="Social Menu" class="footer-social-wrapper">
                                 <h4 class="widget-title">Social Links</h4>
                                 <ul class="social-menu footer-social reset-list-style social-icons fill-children-current-color">
-        
+
                                     <li id="menu-item-2013" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2013"><a href="https://www.facebook.com/"><span class="screen-reader-text">Facebook</span><svg class="svg-icon" aria-hidden="true" role="img" focusable="false" width="24" height="24" viewBox="0 0 10 18" xmlns="http://www.w3.org/2000/svg"><path d="M7.99812 2.98875H9.64137V0.12675C9.35787 0.08775 8.38287 0 7.24738 0C4.87813 0 3.25513 1.49025 3.25513 4.22925V6.75H0.640625V9.9495H3.25513V18H6.46062V9.95025H8.96937L9.36762 6.75075H6.45988V4.5465C6.46063 3.62175 6.70962 2.98875 7.99812 2.98875Z" fill="%23000000"></path></svg></a></li>
         <li id="menu-item-2014" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2014"><a href="https://www.instagram.com/"><span class="screen-reader-text">Instagram</span><svg class="svg-icon" aria-hidden="true" role="img" focusable="false" width="24" height="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path d="M13.1275 0H4.87243C2.18573 0 0 2.18573 0 4.87243V13.1277C0 15.8142 2.18573 18 4.87243 18H13.1277C15.8142 18 18 15.8142 18 13.1277V4.87243C18 2.18573 15.8142 0 13.1275 0V0ZM8.99998 13.9217C6.28609 13.9217 4.07825 11.7139 4.07825 8.99998C4.07825 6.28609 6.28609 4.07825 8.99998 4.07825C11.7139 4.07825 13.9217 6.28609 13.9217 8.99998C13.9217 11.7139 11.7139 13.9217 8.99998 13.9217ZM14.0394 5.23896C13.2374 5.23896 12.5851 4.58665 12.5851 3.78465C12.5851 2.98265 13.2374 2.3302 14.0394 2.3302C14.8414 2.3302 15.4939 2.98265 15.4939 3.78465C15.4939 4.58665 14.8414 5.23896 14.0394 5.23896Z"></path><path d="M8.99931 5.13347C6.86741 5.13347 5.13281 6.86794 5.13281 8.99997C5.13281 11.1319 6.86741 12.8665 8.99931 12.8665C11.1313 12.8665 12.8658 11.1319 12.8658 8.99997C12.8658 6.86794 11.1313 5.13347 8.99931 5.13347Z"></path><path d="M14.0397 3.38555C13.8197 3.38555 13.6406 3.56463 13.6406 3.78463C13.6406 4.00463 13.8197 4.18371 14.0397 4.18371C14.2598 4.18371 14.4389 4.00477 14.4389 3.78463C14.4389 3.56449 14.2598 3.38555 14.0397 3.38555Z"></path></svg></a></li>
         <li id="menu-item-2015" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2015"><a href="https://twitter.com/"><span class="screen-reader-text">Twitter</span><svg class="svg-icon" aria-hidden="true" role="img" focusable="false" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg></a></li>
                                 </ul><!-- .footer-social -->
                             </nav><!-- .footer-social-wrapper -->
                                     </div>
-        
+
                     <div class="col-sm-6 col-lg-4 pb-3">
                                             <div class="widget widget_text"><div class="widget-content"><h4 class="widget-title">Contact Us</h4>			<div class="textwidget"><p>202 Helga Springs Rd, Crawford, TN 38554</p>
         <p>Call Us: <strong><a href="tel:800.275.8777">800.275.8777</a></strong></p>
         <p><a href="mailto:alex@company.com">alex@company.com</a></p>
         </div>
                 </div></div>                            </div>
-        
+
                     <div class="col-lg-4 pb-3">
                                                                         </div>
-        
+
                 </div>
             </div>
-        
-        
-        
+
+
+
                     <div class="footer-bottom">
-        
+
                         <div class="footer-credits">
-        
+
                             <p class="footer-copyright">Copyright ©2025 ZIPWASH. All rights reserved. 
                             </p><!-- .footer-copyright -->
-        
+
                         </div><!-- .footer-credits -->
-        
+
                         <nav class="footer-menu-wrapper" aria-label="Footer">
                             <ul class="footer-menu">
                                                     </ul>
                         </nav>
-        
+
                     </div><!-- .footer-bottom  -->
-        
+
                 </div><!-- .footer-inner -->
-        
+
             </div>
-        
+
         </footer>
     </body>
 </html>
