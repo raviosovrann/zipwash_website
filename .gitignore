@@ -1,5 +1,11 @@
-# Ignore the SQLite database file
+*.log
+*.pot
+*.pyc
+__pycache__/
+.vscode/
+static
+media
+.env/
+local_settings.py
 db.sqlite3
-
-# Ignore the .env file
-.env
+db.sqlite3-journal
