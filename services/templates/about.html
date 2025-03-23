@@ -11,14 +11,14 @@
             <!-- All in One SEO 4.7.9.1 - aioseo.com -->
         <meta name="description" content="Meet our team Our company was founded in 1990. We work daily to become better and we are ready to share best practices. Mike Jones Marketer Facebook Twitter Instagram Bobby Stone CEO and Founder Facebook Twitter Instagram Kate Russell Accountant Facebook Twitter Instagram Dorothy Still Technician Facebook Twitter Instagram John Morgan Technician Facebook Twitter Instagram">
         <meta name="robots" content="max-image-preview:large">
-        <link rel="canonical" href="{% url 'about' %}">
+        <link rel="canonical" href="{% url 'services:about' %}">
         <meta name="generator" content="All in One SEO (AIOSEO) 4.7.9.1">
             <meta property="og:locale" content="en_US">
             <meta property="og:site_name" content="ZIPWASH - CARWASH">
             <meta property="og:type" content="article">
             <meta property="og:title" content="Our Team - ZIPWASH">
             <meta property="og:description" content="Meet our team Our company was founded in 1990. We work daily to become better and we are ready to share best practices. Mike Jones Marketer Facebook Twitter Instagram Bobby Stone CEO and Founder Facebook Twitter Instagram Kate Russell Accountant Facebook Twitter Instagram Dorothy Still Technician Facebook Twitter Instagram John Morgan Technician Facebook Twitter Instagram">
-            <meta property="og:url" content="{% url 'about' %}">
+            <meta property="og:url" content="{% url 'services:about' %}">
             <meta property="og:image" content="https://www.zpwash.com/wp-content/uploads/2022/04/coefo.png">
             <meta property="og:image:secure_url" content="https://www.zpwash.com/wp-content/uploads/2022/04/coefo.png">
             <meta property="og:image:width" content="438">
@@ -222,7 +222,7 @@
         <nav id="pr-nav" class="primary-menu navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid primary-menu-inner px-0">
                 <div class="top-wrap">
-                    <a href="{% url 'home' %}" class="custom-logo-link" rel="home"><img fetchpriority="high" width="499" height="499" src="https://www.zpwash.com/wp-content/uploads/2025/02/cropped-ZIPWASH-LOGO-1-1.png" class="custom-logo style-svg" alt="ZIPWASH" decoding="async" srcset="https://www.zpwash.com/wp-content/uploads/2025/02/cropped-ZIPWASH-LOGO-1-1.png 499w, https://www.zpwash.com/wp-content/uploads/2025/02/cropped-ZIPWASH-LOGO-1-1-300x300.png 300w, https://www.zpwash.com/wp-content/uploads/2025/02/cropped-ZIPWASH-LOGO-1-1-150x150.png 150w, https://www.zpwash.com/wp-content/uploads/2025/02/cropped-ZIPWASH-LOGO-1-1-100x100.png 100w" sizes="(max-width: 499px) 100vw, 499px"></a>            <button id="mobile-toggle" class="navbar-toggler animate-button collapsed" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <a href="{% url 'services:home' %}" class="custom-logo-link" rel="home"><img fetchpriority="high" width="499" height="499" src="https://www.zpwash.com/wp-content/uploads/2025/02/cropped-ZIPWASH-LOGO-1-1.png" class="custom-logo style-svg" alt="ZIPWASH" decoding="async" srcset="https://www.zpwash.com/wp-content/uploads/2025/02/cropped-ZIPWASH-LOGO-1-1.png 499w, https://www.zpwash.com/wp-content/uploads/2025/02/cropped-ZIPWASH-LOGO-1-1-300x300.png 300w, https://www.zpwash.com/wp-content/uploads/2025/02/cropped-ZIPWASH-LOGO-1-1-150x150.png 150w, https://www.zpwash.com/wp-content/uploads/2025/02/cropped-ZIPWASH-LOGO-1-1-100x100.png 100w" sizes="(max-width: 499px) 100vw, 499px"></a>            <button id="mobile-toggle" class="navbar-toggler animate-button collapsed" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                         <span id="m-tgl-icon" class="animated-icon1"><span></span><span></span></span>
                     </button>
                 </div>
@@ -230,11 +230,12 @@
                     <ul id="primary-menu" class="navbar-nav pl-3 pr-3" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement"><li id="menu-item-2007" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2007 nav-item"><a itemprop="url" href="/" class="nav-link"><span itemprop="name">Home</span></a></li>
         <li id="menu-item-5654" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-5654 nav-item"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-5654"><span itemprop="name">Our Area</span></a>
         <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-5654">
-            <li id="menu-item-6152" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6152 nav-item"><a itemprop="url" href="{% url 'pricing' %}" class="dropdown-item"><span itemprop="name">Book Now</span></a></li>
+            <li id="menu-item-6152" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6152 nav-item"><a itemprop="url" href="{% url 'services:pricing' %}" class="dropdown-item"><span itemprop="name">Book Now</span></a></li>
         </ul>
         </li>
-        <li id="menu-item-5655" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4667 current_page_item active menu-item-5655 nav-item"><a itemprop="url" href="{% url 'about' %}" class="nav-link" aria-current="page"><span itemprop="name">About Us</span></a></li>
-        <li id="menu-item-5655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5655 nav-item"><a itemprop="url" href="{% url 'login' %}" class="nav-link"><span itemprop="name">Sign In</span></a></li>
+        <li id="menu-item-5655" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4667 current_page_item active menu-item-5655 nav-item"><a itemprop="url" href="{% url 'services:about' %}" class="nav-link" aria-current="page"><span itemprop="name">About Us</span></a></li>
+        <li id="menu-item-5655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5655 nav-item"><a itemprop="url" href="{% url 'accounts:login' %}" class="nav-link"><span itemprop="name">Sign In</span></a></li>
+        {% comment %} <li id="menu-item-5655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5655 nav-item"><a itemprop="url" href="{% url 'login' %}" class="nav-link"><span itemprop="name">Sign In</span></a></li> {% endcomment %}
         </ul>                <div class="header-info">
                                                                         <div class="header-phone">
                                     <a href="tel:800.275.8777">
