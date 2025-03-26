@@ -4,68 +4,180 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <title>{% block title %} Home ZipWash - ZIPWASH {% endblock %}</title>
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
-        <link rel="icon" href="{% static 'images/favicon.ico' %}">
+        <link rel="icon" href="{% static 'img/favicon.ico' %}">
+        <meta property="og:image" content="{% static 'img/main-responsive-image.pngg' %}">
         <meta name="description" content="Description of the page">
         <meta name="keywords" content="carwash, carwash service, carwash near me, 
         carwash services, car wash, car wash service, car detailing service, car detail services 
         car wash services">
         <meta property="og:title" content="Title of the page">
         <meta property="og:description" content="Description of the page">
-        <meta property="og:image" content="{% static 'images/og-image.jpg' %}">
-        <meta property="og:url" content="https://www.example.com/page-url">
+        
     </head>
     <body>
-        <nav class="navbar">
-            <div class="nav-container">
-                <a href="{% url 'services:home' %}" class="nav-logo">ZIPWASH</a>
-                
-                <div class="nav-toggle" id="navToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-
-                <div class="nav-menu" id="navMenu">
-                    <div class="search-container">
-                        <form class="search-form">
-                            <input type="search" placeholder="City, Address, Zip" class="search-input">
-                            <button type="submit" class="search-button">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                </svg>
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="{% url 'services:home'%}">ZIPWASH</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="{% url 'services:home'%}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'services:services'%}">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'services:about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'accounts:login' %}">
+                            <button class="sign-in-btn">
+                                Sign In
                             </button>
-                        </form>
-                    </div>
-                    
-                    <ul class="nav-list">
-                        <li><a href="{% url 'services:home' %}" class="nav-link active">Home</a></li>
-                        <li><a href="{% url 'services:services' %}" class="nav-link">Services</a></li>
-                        <li><a href="{% url 'services:about' %}" class="nav-link">About</a></li>
-                    </ul>
-                    
-                    <div class="nav-auth">
-                        <button>
-                            <span class="transition"></span>
-                            <span class="gradient"></span>
-                            <span class="label">Sign In</span>
-                        </button>
-                        {% comment %} <a href="{% url 'accounts:login' %}" class="sign-in-btn">Sign In</a> {% endcomment %}
-                    </div>
+                        </a>
+                    </li>
+                  </ul>
                 </div>
+              </div>
             </div>
         </nav>
-
         {% block content %}
+        <section class="ezy__header29 light" style="background-image: url({% static 'img/main-responsive-image.png' %});">
+            <div class="container">
+              <div class="row justify-content-center text-center">
+                <div class="col-12 col-lg-9">
+                  <h1 class="ezy__header29-heading">We're offering Some useful Course Materials</h1>
+                  <p class="ezy__header29-sub-heading px-5 py-4">
+                    Vitae bibendum egestas magna sit elit non. Netus volutpat dignissim pharetra felis. Orci commodo mauris
+                    adipiscing semper amet.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <style>
+          .ezy__header29 {
+            /* Bootstrap variables */
+            --bs-body-bg: rgb(255, 255, 255);
+          
+            /* Easy Frontend variables */
+            --ezy-theme-color: rgb(13, 110, 253);
+            --ezy-theme-color-rgb: 13, 110, 253;
+          
+            background-color: var(--bs-body-bg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            overflow: hidden;
+            padding: 120px 0;
+            position: relative;
+          }
+          
+          @media (min-width: 768px) {
+            .ezy__header29 {
+              padding: 200px 0;
+            }
+          }
+          
+          /* Gray Block Style */
+          .gray .ezy__header29,
+          .ezy__header29.gray {
+            /* Bootstrap variables */
+            --bs-body-bg: rgb(246, 246, 246);
+          }
+          
+          /* Dark Gray Block Style */
+          .dark-gray .ezy__header29,
+          .ezy__header29.dark-gray {
+            /* Bootstrap variables */
+            --bs-body-color: #ffffff;
+            --bs-body-bg: rgb(30, 39, 53);
+          }
+          
+          /* Dark Block Style */
+          .dark .ezy__header29,
+          .ezy__header29.dark {
+            /* Bootstrap variables */
+            --bs-body-color: #ffffff;
+            --bs-body-bg: rgb(11, 23, 39);
+          }
+          
+          .ezy__header29-heading {
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 1.2;
+          }
+          
+          @media (min-width: 768px) {
+            .ezy__header29-heading {
+              font-size: 63px;
+            }
+          }
+          
+          .ezy__header29-sub-heading {
+            font-size: 20px;
+            line-height: 1.3;
+            opacity: 0.8;
+          }
+          
+          .ezy__header29-form-card {
+            background-color: #303446;
+            border-radius: 30px;
+            overflow: hidden;
+          }
+          
+          .ezy__header29 .form-control {
+            min-height: 48px;
+            line-height: 26px;
+            border: none;
+            background: rgba(255, 255, 255, 1);
+            color: #000000;
+            border-radius: 10px;
+          }
+          
+          .ezy__header29 .form-control:focus {
+            box-shadow: none;
+          }
+          
+          .ezy__header29-btn {
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            padding: 11px 30px;
+            height: 50px;
+            border-color: var(--ezy-theme-color);
+            background-color: var(--ezy-theme-color);
+            border-radius: 10px;
+          }
+          
+          .ezy__header29-btn:hover {
+            color: #fff;
+            border-color: rgba(var(--ezy-theme-color-rgb), 0.9);
+            background-color: rgba(var(--ezy-theme-color-rgb), 0.9);
+          }
+          </style>
+        
+    
         {% endblock %}
 
         <script>
-            document.getElementById('navToggle').addEventListener('click', function() {
-                this.classList.toggle('active');
-                document.getElementById('navMenu').classList.toggle('active');
-            });
+            
         </script>
     </body>
 </html>
